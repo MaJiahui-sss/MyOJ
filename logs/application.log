@@ -1,0 +1,523 @@
+2025-03-10 19:45:17.871  INFO 39868 --- [main] com.mjh.myojpro.MyOJproApplication       : Starting MyOJproApplication using Java 1.8.0_392 on MaJiahui with PID 39868 (D:\JavaCode\Yupi\OJ\MyOJpro\target\classes started by Ma Jiahui in D:\JavaCode\Yupi\OJ\MyOJpro)
+2025-03-10 19:45:17.872 DEBUG 39868 --- [main] com.mjh.myojpro.MyOJproApplication       : Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-03-10 19:45:17.873  INFO 39868 --- [main] com.mjh.myojpro.MyOJproApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-10 19:45:18.550  INFO 39868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2025-03-10 19:45:18.556  INFO 39868 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-10 19:45:18.556  INFO 39868 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-03-10 19:45:18.619  INFO 39868 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-10 19:45:18.619  INFO 39868 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 707 ms
+2025-03-10 19:45:19.516  WARN 39868 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mjh.myojpro.model.pojo.User".
+2025-03-10 19:45:19.759  INFO 39868 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-03-10 19:45:19.833  INFO 39868 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2025-03-10 19:45:19.838  INFO 39868 --- [main] com.mjh.myojpro.MyOJproApplication       : Started MyOJproApplication in 2.291 seconds (JVM running for 3.101)
+2025-03-10 19:45:28.802  INFO 39868 --- [http-nio-9000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-10 19:45:28.803  INFO 39868 --- [http-nio-9000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-10 19:45:28.806  INFO 39868 --- [http-nio-9000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-03-10 19:45:28.917  INFO 39868 --- [http-nio-9000-exec-2] c.m.m.service.impl.UserServiceImpl       : 接收参数不全
+2025-03-10 19:45:28.926 ERROR 39868 --- [http-nio-9000-exec-2] c.m.m.exception.GlobalExceptionHandler   : 参数错误
+
+com.mjh.myojpro.exception.BusinessException: 参数错误
+	at com.mjh.myojpro.service.impl.UserServiceImpl.login(UserServiceImpl.java:35) ~[classes/:na]
+	at com.mjh.myojpro.service.impl.UserServiceImpl$$FastClassBySpringCGLIB$$c157c6ed.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704) ~[spring-aop-5.3.23.jar:5.3.23]
+	at com.mjh.myojpro.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$ff57c2e.login(<generated>) ~[classes/:na]
+	at com.mjh.myojpro.controller.UserController.login(UserController.java:29) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_392]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_392]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_392]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_392]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670) [tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) [tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_392]
+
+2025-03-10 19:45:57.676  INFO 39868 --- [http-nio-9000-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-10 19:45:57.993  INFO 39868 --- [http-nio-9000-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-10 19:45:57.999 DEBUG 39868 --- [http-nio-9000-exec-3] c.m.myojpro.mapper.UserMapper.selectOne  : ==>  Preparing: SELECT user_id,user_name,password,status,is_admin,create_time,update_time FROM user WHERE (user_name = ?)
+2025-03-10 19:45:58.038 DEBUG 39868 --- [http-nio-9000-exec-3] c.m.myojpro.mapper.UserMapper.selectOne  : ==> Parameters: mjh(String)
+2025-03-10 19:45:58.069 DEBUG 39868 --- [http-nio-9000-exec-3] c.m.myojpro.mapper.UserMapper.selectOne  : <==      Total: 1
+2025-03-10 19:45:58.076  INFO 39868 --- [http-nio-9000-exec-3] c.m.m.service.impl.UserServiceImpl       : 当前用户存在，但是密码不正确
+2025-03-10 19:45:58.077 ERROR 39868 --- [http-nio-9000-exec-3] c.m.m.exception.GlobalExceptionHandler   : 但是密码不正确
+
+com.mjh.myojpro.exception.BusinessException: 但是密码不正确
+	at com.mjh.myojpro.service.impl.UserServiceImpl.login(UserServiceImpl.java:47) ~[classes/:na]
+	at com.mjh.myojpro.service.impl.UserServiceImpl$$FastClassBySpringCGLIB$$c157c6ed.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704) ~[spring-aop-5.3.23.jar:5.3.23]
+	at com.mjh.myojpro.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$ff57c2e.login(<generated>) ~[classes/:na]
+	at com.mjh.myojpro.controller.UserController.login(UserController.java:29) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_392]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_392]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_392]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_392]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670) [tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) [tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_392]
+
+2025-03-10 19:46:56.350  INFO 39868 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-10 19:46:56.357  INFO 39868 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-10 19:47:01.201  INFO 51320 --- [main] com.mjh.myojpro.MyOJproApplication       : Starting MyOJproApplication using Java 1.8.0_392 on MaJiahui with PID 51320 (D:\JavaCode\Yupi\OJ\MyOJpro\target\classes started by Ma Jiahui in D:\JavaCode\Yupi\OJ\MyOJpro)
+2025-03-10 19:47:01.203 DEBUG 51320 --- [main] com.mjh.myojpro.MyOJproApplication       : Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-03-10 19:47:01.204  INFO 51320 --- [main] com.mjh.myojpro.MyOJproApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-10 19:47:01.798  INFO 51320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2025-03-10 19:47:01.803  INFO 51320 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-10 19:47:01.803  INFO 51320 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-03-10 19:47:01.853  INFO 51320 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-10 19:47:01.853  INFO 51320 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 622 ms
+2025-03-10 19:47:02.737  WARN 51320 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mjh.myojpro.model.pojo.User".
+2025-03-10 19:47:02.964  INFO 51320 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-03-10 19:47:03.036  INFO 51320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2025-03-10 19:47:03.041  INFO 51320 --- [main] com.mjh.myojpro.MyOJproApplication       : Started MyOJproApplication in 2.066 seconds (JVM running for 2.86)
+2025-03-10 19:47:22.075  INFO 52924 --- [main] com.mjh.myojpro.MyOJproApplication       : Starting MyOJproApplication using Java 1.8.0_392 on MaJiahui with PID 52924 (D:\JavaCode\Yupi\OJ\MyOJpro\target\classes started by Ma Jiahui in D:\JavaCode\Yupi\OJ\MyOJpro)
+2025-03-10 19:47:22.077 DEBUG 52924 --- [main] com.mjh.myojpro.MyOJproApplication       : Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-03-10 19:47:22.077  INFO 52924 --- [main] com.mjh.myojpro.MyOJproApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-10 19:47:22.644  INFO 52924 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2025-03-10 19:47:22.649  INFO 52924 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-10 19:47:22.649  INFO 52924 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-03-10 19:47:22.703  INFO 52924 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-10 19:47:22.703  INFO 52924 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 601 ms
+2025-03-10 19:47:23.646  WARN 52924 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mjh.myojpro.model.pojo.User".
+2025-03-10 19:47:23.857  INFO 52924 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-03-10 19:47:23.937  INFO 52924 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2025-03-10 19:47:23.943  INFO 52924 --- [main] com.mjh.myojpro.MyOJproApplication       : Started MyOJproApplication in 2.102 seconds (JVM running for 2.91)
+2025-03-10 19:47:28.430  INFO 52924 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-10 19:47:28.430  INFO 52924 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-10 19:47:28.431  INFO 52924 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-10 19:47:28.526  INFO 52924 --- [http-nio-9000-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-10 19:47:28.706  INFO 52924 --- [http-nio-9000-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-10 19:47:28.710 DEBUG 52924 --- [http-nio-9000-exec-1] c.m.myojpro.mapper.UserMapper.selectOne  : ==>  Preparing: SELECT user_id,user_name,password,status,is_admin,create_time,update_time FROM user WHERE (user_name = ?)
+2025-03-10 19:47:28.723 DEBUG 52924 --- [http-nio-9000-exec-1] c.m.myojpro.mapper.UserMapper.selectOne  : ==> Parameters: mjh(String)
+2025-03-10 19:47:28.738 DEBUG 52924 --- [http-nio-9000-exec-1] c.m.myojpro.mapper.UserMapper.selectOne  : <==      Total: 1
+2025-03-10 19:47:28.741  INFO 52924 --- [http-nio-9000-exec-1] c.m.m.service.impl.UserServiceImpl       : 当前用户存在，但是密码不正确
+2025-03-10 19:47:28.744 ERROR 52924 --- [http-nio-9000-exec-1] c.m.m.exception.GlobalExceptionHandler   : 当前用户存在，但是密码不正确
+
+com.mjh.myojpro.exception.BusinessException: 当前用户存在，但是密码不正确
+	at com.mjh.myojpro.service.impl.UserServiceImpl.login(UserServiceImpl.java:47) ~[classes/:na]
+	at com.mjh.myojpro.service.impl.UserServiceImpl$$FastClassBySpringCGLIB$$c157c6ed.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704) ~[spring-aop-5.3.23.jar:5.3.23]
+	at com.mjh.myojpro.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$b94600dc.login(<generated>) ~[classes/:na]
+	at com.mjh.myojpro.controller.UserController.login(UserController.java:29) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_392]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_392]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_392]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_392]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670) [tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) [tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_392]
+
+2025-03-10 19:47:40.787  INFO 52924 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-10 19:47:40.796  INFO 52924 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-10 19:49:10.003  INFO 57824 --- [main] com.mjh.myojpro.MyOJproApplication       : Starting MyOJproApplication using Java 1.8.0_392 on MaJiahui with PID 57824 (D:\JavaCode\Yupi\OJ\MyOJpro\target\classes started by Ma Jiahui in D:\JavaCode\Yupi\OJ\MyOJpro)
+2025-03-10 19:49:10.005 DEBUG 57824 --- [main] com.mjh.myojpro.MyOJproApplication       : Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-03-10 19:49:10.005  INFO 57824 --- [main] com.mjh.myojpro.MyOJproApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-10 19:49:10.592  INFO 57824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2025-03-10 19:49:10.597  INFO 57824 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-10 19:49:10.598  INFO 57824 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-03-10 19:49:10.647  INFO 57824 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-10 19:49:10.654  INFO 57824 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 618 ms
+2025-03-10 19:49:11.597  WARN 57824 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mjh.myojpro.model.pojo.User".
+2025-03-10 19:49:11.847  INFO 57824 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-03-10 19:49:11.920  INFO 57824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2025-03-10 19:49:11.925  INFO 57824 --- [main] com.mjh.myojpro.MyOJproApplication       : Started MyOJproApplication in 2.155 seconds (JVM running for 2.937)
+2025-03-10 19:49:22.791  INFO 53056 --- [main] com.mjh.myojpro.MyOJproApplication       : Starting MyOJproApplication using Java 1.8.0_392 on MaJiahui with PID 53056 (D:\JavaCode\Yupi\OJ\MyOJpro\target\classes started by Ma Jiahui in D:\JavaCode\Yupi\OJ\MyOJpro)
+2025-03-10 19:49:22.792 DEBUG 53056 --- [main] com.mjh.myojpro.MyOJproApplication       : Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-03-10 19:49:22.792  INFO 53056 --- [main] com.mjh.myojpro.MyOJproApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-10 19:49:23.366  INFO 53056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2025-03-10 19:49:23.371  INFO 53056 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-10 19:49:23.371  INFO 53056 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-03-10 19:49:23.422  INFO 53056 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-10 19:49:23.422  INFO 53056 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 600 ms
+2025-03-10 19:49:24.375  WARN 53056 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mjh.myojpro.model.pojo.User".
+2025-03-10 19:49:24.598  INFO 53056 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-03-10 19:49:24.673  INFO 53056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2025-03-10 19:49:24.679  INFO 53056 --- [main] com.mjh.myojpro.MyOJproApplication       : Started MyOJproApplication in 2.114 seconds (JVM running for 2.975)
+2025-03-10 19:49:27.753  INFO 53056 --- [http-nio-9000-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-10 19:49:27.753  INFO 53056 --- [http-nio-9000-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-10 19:49:27.755  INFO 53056 --- [http-nio-9000-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-10 19:49:27.850  INFO 53056 --- [http-nio-9000-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-10 19:49:28.017  INFO 53056 --- [http-nio-9000-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-10 19:49:28.021 DEBUG 53056 --- [http-nio-9000-exec-3] c.m.myojpro.mapper.UserMapper.selectOne  : ==>  Preparing: SELECT user_id,user_name,password,status,is_admin,create_time,update_time FROM user WHERE (user_name = ?)
+2025-03-10 19:49:28.035 DEBUG 53056 --- [http-nio-9000-exec-3] c.m.myojpro.mapper.UserMapper.selectOne  : ==> Parameters: mjh(String)
+2025-03-10 19:49:28.049 DEBUG 53056 --- [http-nio-9000-exec-3] c.m.myojpro.mapper.UserMapper.selectOne  : <==      Total: 1
+2025-03-10 19:49:28.052  INFO 53056 --- [http-nio-9000-exec-3] c.m.m.service.impl.UserServiceImpl       : 当前用户存在，但是密码不正确
+2025-03-10 19:49:54.934 DEBUG 53056 --- [http-nio-9000-exec-6] c.m.myojpro.mapper.UserMapper.selectOne  : ==>  Preparing: SELECT user_id,user_name,password,status,is_admin,create_time,update_time FROM user WHERE (user_name = ?)
+2025-03-10 19:49:54.935 DEBUG 53056 --- [http-nio-9000-exec-6] c.m.myojpro.mapper.UserMapper.selectOne  : ==> Parameters: mh(String)
+2025-03-10 19:49:54.936 DEBUG 53056 --- [http-nio-9000-exec-6] c.m.myojpro.mapper.UserMapper.selectOne  : <==      Total: 0
+2025-03-10 19:49:54.938  INFO 53056 --- [http-nio-9000-exec-6] c.m.m.service.impl.UserServiceImpl       : 当前用户不存在
+2025-03-10 19:50:07.405 DEBUG 53056 --- [http-nio-9000-exec-4] c.m.myojpro.mapper.UserMapper.selectOne  : ==>  Preparing: SELECT user_id,user_name,password,status,is_admin,create_time,update_time FROM user WHERE (user_name = ?)
+2025-03-10 19:50:07.406 DEBUG 53056 --- [http-nio-9000-exec-4] c.m.myojpro.mapper.UserMapper.selectOne  : ==> Parameters: mjh(String)
+2025-03-10 19:50:07.407 DEBUG 53056 --- [http-nio-9000-exec-4] c.m.myojpro.mapper.UserMapper.selectOne  : <==      Total: 1
+2025-03-10 19:50:07.407  INFO 53056 --- [http-nio-9000-exec-4] c.m.m.service.impl.UserServiceImpl       : mjh登录成功
+2025-03-10 19:50:28.556  INFO 53056 --- [http-nio-9000-exec-9] c.m.m.service.impl.UserServiceImpl       : 接收参数不全
+2025-03-10 19:50:34.272  INFO 53056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-10 19:50:34.280  INFO 53056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-10 19:57:54.244  INFO 43080 --- [main] com.mjh.myojpro.MyOJproApplication       : Starting MyOJproApplication using Java 1.8.0_392 on MaJiahui with PID 43080 (D:\JavaCode\Yupi\OJ\MyOJpro\target\classes started by Ma Jiahui in D:\JavaCode\Yupi\OJ\MyOJpro)
+2025-03-10 19:57:54.245 DEBUG 43080 --- [main] com.mjh.myojpro.MyOJproApplication       : Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-03-10 19:57:54.246  INFO 43080 --- [main] com.mjh.myojpro.MyOJproApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-10 19:57:54.832  INFO 43080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2025-03-10 19:57:54.837  INFO 43080 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-10 19:57:54.838  INFO 43080 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-03-10 19:57:54.890  INFO 43080 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-10 19:57:54.891  INFO 43080 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 615 ms
+2025-03-10 19:57:55.752  WARN 43080 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mjh.myojpro.model.pojo.User".
+2025-03-10 19:57:55.983  INFO 43080 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-03-10 19:57:56.058  INFO 43080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2025-03-10 19:57:56.063  INFO 43080 --- [main] com.mjh.myojpro.MyOJproApplication       : Started MyOJproApplication in 2.086 seconds (JVM running for 2.838)
+2025-03-10 19:58:02.638  INFO 43080 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-10 19:58:02.639  INFO 43080 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-10 19:58:02.640  INFO 43080 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-10 19:58:02.657  WARN 43080 --- [http-nio-9000-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2025-03-10 19:58:18.606  INFO 43080 --- [http-nio-9000-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-10 19:58:18.776  INFO 43080 --- [http-nio-9000-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-10 19:58:18.781 DEBUG 43080 --- [http-nio-9000-exec-3] c.mjh.myojpro.mapper.UserMapper.insert   : ==>  Preparing: INSERT INTO user ( user_name, password ) VALUES ( ?, ? )
+2025-03-10 19:58:18.804 DEBUG 43080 --- [http-nio-9000-exec-3] c.mjh.myojpro.mapper.UserMapper.insert   : ==> Parameters: wys(String), 123(String)
+2025-03-10 19:58:18.835 DEBUG 43080 --- [http-nio-9000-exec-3] c.mjh.myojpro.mapper.UserMapper.insert   : <==    Updates: 1
+2025-03-10 19:58:48.534 DEBUG 43080 --- [http-nio-9000-exec-4] c.mjh.myojpro.mapper.UserMapper.insert   : ==>  Preparing: INSERT INTO user ( user_name, password ) VALUES ( ?, ? )
+2025-03-10 19:58:48.534 DEBUG 43080 --- [http-nio-9000-exec-4] c.mjh.myojpro.mapper.UserMapper.insert   : ==> Parameters: dty(String), 123(String)
+2025-03-10 19:58:48.536 DEBUG 43080 --- [http-nio-9000-exec-4] c.mjh.myojpro.mapper.UserMapper.insert   : <==    Updates: 1
+2025-03-10 19:59:20.505  INFO 43080 --- [http-nio-9000-exec-5] c.m.m.service.impl.UserServiceImpl       : 接收参数不全
+2025-03-10 19:59:50.834  INFO 43080 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-10 19:59:50.841  INFO 43080 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-10 20:07:00.180  INFO 49904 --- [main] com.mjh.myojpro.MyOJproApplication       : Starting MyOJproApplication using Java 1.8.0_392 on MaJiahui with PID 49904 (D:\JavaCode\Yupi\OJ\MyOJpro\target\classes started by Ma Jiahui in D:\JavaCode\Yupi\OJ\MyOJpro)
+2025-03-10 20:07:00.181 DEBUG 49904 --- [main] com.mjh.myojpro.MyOJproApplication       : Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-03-10 20:07:00.182  INFO 49904 --- [main] com.mjh.myojpro.MyOJproApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-10 20:07:00.864  INFO 49904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2025-03-10 20:07:00.869  INFO 49904 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-10 20:07:00.869  INFO 49904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-03-10 20:07:00.930  INFO 49904 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-10 20:07:00.930  INFO 49904 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 714 ms
+2025-03-10 20:07:01.793  WARN 49904 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mjh.myojpro.model.pojo.User".
+2025-03-10 20:07:02.077  INFO 49904 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-03-10 20:07:02.163  INFO 49904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2025-03-10 20:07:02.170  INFO 49904 --- [main] com.mjh.myojpro.MyOJproApplication       : Started MyOJproApplication in 2.288 seconds (JVM running for 3.056)
+2025-03-10 20:07:10.813  INFO 49904 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-10 20:07:10.814  INFO 49904 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-10 20:07:10.815  INFO 49904 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-10 20:07:10.925  INFO 49904 --- [http-nio-9000-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-10 20:07:11.198  INFO 49904 --- [http-nio-9000-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-10 20:07:11.206 DEBUG 49904 --- [http-nio-9000-exec-1] c.mjh.myojpro.mapper.UserMapper.insert   : ==>  Preparing: INSERT INTO user ( user_name, password, status ) VALUES ( ?, ?, ? )
+2025-03-10 20:07:11.227 DEBUG 49904 --- [http-nio-9000-exec-1] c.mjh.myojpro.mapper.UserMapper.insert   : ==> Parameters: dty(String), 202cb962ac59075b964b07152d234b70(String), true(Boolean)
+2025-03-10 20:07:11.232 DEBUG 49904 --- [http-nio-9000-exec-1] c.mjh.myojpro.mapper.UserMapper.insert   : <==    Updates: 1
+2025-03-10 20:07:21.962 DEBUG 49904 --- [http-nio-9000-exec-5] c.mjh.myojpro.mapper.UserMapper.insert   : ==>  Preparing: INSERT INTO user ( user_name, password, status ) VALUES ( ?, ?, ? )
+2025-03-10 20:07:21.962 DEBUG 49904 --- [http-nio-9000-exec-5] c.mjh.myojpro.mapper.UserMapper.insert   : ==> Parameters: dty(String), 202cb962ac59075b964b07152d234b70(String), true(Boolean)
+2025-03-10 20:07:21.966 DEBUG 49904 --- [http-nio-9000-exec-5] c.mjh.myojpro.mapper.UserMapper.insert   : <==    Updates: 1
+2025-03-10 20:07:43.732  INFO 49904 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-10 20:07:43.739  INFO 49904 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-10 20:10:16.810  INFO 52336 --- [main] com.mjh.myojpro.MyOJproApplication       : Starting MyOJproApplication using Java 1.8.0_392 on MaJiahui with PID 52336 (D:\JavaCode\Yupi\OJ\MyOJpro\target\classes started by Ma Jiahui in D:\JavaCode\Yupi\OJ\MyOJpro)
+2025-03-10 20:10:16.811 DEBUG 52336 --- [main] com.mjh.myojpro.MyOJproApplication       : Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-03-10 20:10:16.812  INFO 52336 --- [main] com.mjh.myojpro.MyOJproApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-10 20:10:17.367  INFO 52336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2025-03-10 20:10:17.372  INFO 52336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-10 20:10:17.372  INFO 52336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-03-10 20:10:17.423  INFO 52336 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-10 20:10:17.423  INFO 52336 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 587 ms
+2025-03-10 20:10:18.523  WARN 52336 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mjh.myojpro.model.pojo.User".
+2025-03-10 20:10:18.740  INFO 52336 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-03-10 20:10:18.865  INFO 52336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2025-03-10 20:10:18.874  INFO 52336 --- [main] com.mjh.myojpro.MyOJproApplication       : Started MyOJproApplication in 2.302 seconds (JVM running for 3.16)
+2025-03-10 20:10:20.419  INFO 52336 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-10 20:10:20.419  INFO 52336 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-10 20:10:20.420  INFO 52336 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-10 20:10:20.511  INFO 52336 --- [http-nio-9000-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-10 20:10:20.674  INFO 52336 --- [http-nio-9000-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-10 20:10:20.679 DEBUG 52336 --- [http-nio-9000-exec-1] c.m.myojpro.mapper.UserMapper.selectOne  : ==>  Preparing: SELECT user_id,user_name,password,status,is_admin,create_time,update_time FROM user WHERE (user_name = ?)
+2025-03-10 20:10:20.692 DEBUG 52336 --- [http-nio-9000-exec-1] c.m.myojpro.mapper.UserMapper.selectOne  : ==> Parameters: dty(String)
+2025-03-10 20:10:20.707 DEBUG 52336 --- [http-nio-9000-exec-1] c.m.myojpro.mapper.UserMapper.selectOne  : <==      Total: 3
+2025-03-10 20:10:20.714 ERROR 52336 --- [http-nio-9000-exec-1] c.m.m.exception.GlobalExceptionHandler   : nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 3
+
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 3
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:96) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at com.sun.proxy.$Proxy61.selectOne(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:89) ~[mybatis-plus-core-3.4.3.jar:3.4.3]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148) ~[mybatis-plus-core-3.4.3.jar:3.4.3]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89) ~[mybatis-plus-core-3.4.3.jar:3.4.3]
+	at com.sun.proxy.$Proxy62.selectOne(Unknown Source) ~[na:na]
+	at com.mjh.myojpro.service.impl.UserServiceImpl.register(UserServiceImpl.java:43) ~[classes/:na]
+	at com.mjh.myojpro.service.impl.UserServiceImpl$$FastClassBySpringCGLIB$$c157c6ed.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704) ~[spring-aop-5.3.23.jar:5.3.23]
+	at com.mjh.myojpro.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$57273f28.register(<generated>) ~[classes/:na]
+	at com.mjh.myojpro.controller.UserController.register(UserController.java:36) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_392]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_392]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_392]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_392]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696) [tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) [tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.68.jar:9.0.68]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_392]
+Caused by: org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 3
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:80) ~[mybatis-3.5.7.jar:3.5.7]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_392]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_392]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_392]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_392]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	... 64 common frames omitted
+
+2025-03-10 20:12:55.849  INFO 52336 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-10 20:12:55.858  INFO 52336 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-10 20:13:00.845  INFO 45004 --- [main] com.mjh.myojpro.MyOJproApplication       : Starting MyOJproApplication using Java 1.8.0_392 on MaJiahui with PID 45004 (D:\JavaCode\Yupi\OJ\MyOJpro\target\classes started by Ma Jiahui in D:\JavaCode\Yupi\OJ\MyOJpro)
+2025-03-10 20:13:00.847 DEBUG 45004 --- [main] com.mjh.myojpro.MyOJproApplication       : Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-03-10 20:13:00.847  INFO 45004 --- [main] com.mjh.myojpro.MyOJproApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-10 20:13:01.413  INFO 45004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2025-03-10 20:13:01.419  INFO 45004 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-10 20:13:01.419  INFO 45004 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-03-10 20:13:01.473  INFO 45004 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-10 20:13:01.473  INFO 45004 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 598 ms
+2025-03-10 20:13:02.346  WARN 45004 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mjh.myojpro.model.pojo.User".
+2025-03-10 20:13:02.570  INFO 45004 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-03-10 20:13:02.643  INFO 45004 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2025-03-10 20:13:02.648  INFO 45004 --- [main] com.mjh.myojpro.MyOJproApplication       : Started MyOJproApplication in 2.028 seconds (JVM running for 2.872)
+2025-03-10 20:13:06.206  INFO 45004 --- [http-nio-9000-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-10 20:13:06.207  INFO 45004 --- [http-nio-9000-exec-10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-10 20:13:06.207  INFO 45004 --- [http-nio-9000-exec-10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-03-10 20:13:06.294  INFO 45004 --- [http-nio-9000-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-10 20:13:06.458  INFO 45004 --- [http-nio-9000-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-10 20:13:06.463 DEBUG 45004 --- [http-nio-9000-exec-10] c.m.m.mapper.UserMapper.selectList       : ==>  Preparing: SELECT user_id,user_name,password,status,is_admin,create_time,update_time FROM user WHERE (user_name = ?)
+2025-03-10 20:13:06.476 DEBUG 45004 --- [http-nio-9000-exec-10] c.m.m.mapper.UserMapper.selectList       : ==> Parameters: dty(String)
+2025-03-10 20:13:06.492 DEBUG 45004 --- [http-nio-9000-exec-10] c.m.m.mapper.UserMapper.selectList       : <==      Total: 3
+2025-03-10 20:13:37.942  INFO 45004 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-10 20:13:37.951  INFO 45004 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-10 20:15:56.264  INFO 19372 --- [main] com.mjh.myojpro.MyOJproApplication       : Starting MyOJproApplication using Java 1.8.0_392 on MaJiahui with PID 19372 (D:\JavaCode\Yupi\OJ\MyOJpro\target\classes started by Ma Jiahui in D:\JavaCode\Yupi\OJ\MyOJpro)
+2025-03-10 20:15:56.265 DEBUG 19372 --- [main] com.mjh.myojpro.MyOJproApplication       : Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-03-10 20:15:56.266  INFO 19372 --- [main] com.mjh.myojpro.MyOJproApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-10 20:15:57.022  INFO 19372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2025-03-10 20:15:57.027  INFO 19372 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-10 20:15:57.028  INFO 19372 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-03-10 20:15:57.085  INFO 19372 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-10 20:15:57.085  INFO 19372 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 791 ms
+2025-03-10 20:15:57.968  WARN 19372 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mjh.myojpro.model.pojo.User".
+2025-03-10 20:15:58.197  INFO 19372 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-03-10 20:15:58.287  INFO 19372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2025-03-10 20:15:58.293  INFO 19372 --- [main] com.mjh.myojpro.MyOJproApplication       : Started MyOJproApplication in 2.283 seconds (JVM running for 3.292)
+2025-03-10 20:16:01.451  INFO 19372 --- [http-nio-9000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-10 20:16:01.451  INFO 19372 --- [http-nio-9000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-10 20:16:01.452  INFO 19372 --- [http-nio-9000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-10 20:16:01.563  INFO 19372 --- [http-nio-9000-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-10 20:16:01.744  INFO 19372 --- [http-nio-9000-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-10 20:16:01.748 DEBUG 19372 --- [http-nio-9000-exec-2] c.m.myojpro.mapper.UserMapper.selectOne  : ==>  Preparing: SELECT user_id,user_name,password,status,is_admin,create_time,update_time FROM user WHERE (user_name = ?)
+2025-03-10 20:16:01.762 DEBUG 19372 --- [http-nio-9000-exec-2] c.m.myojpro.mapper.UserMapper.selectOne  : ==> Parameters: mjh(String)
+2025-03-10 20:16:01.777 DEBUG 19372 --- [http-nio-9000-exec-2] c.m.myojpro.mapper.UserMapper.selectOne  : <==      Total: 1
+2025-03-10 20:16:01.785  INFO 19372 --- [http-nio-9000-exec-2] c.m.m.service.impl.UserServiceImpl       : 当前用户存在，但是密码不正确
+2025-03-10 20:16:18.940 DEBUG 19372 --- [http-nio-9000-exec-3] c.m.m.mapper.UserMapper.selectList       : ==>  Preparing: SELECT user_id,user_name,password,status,is_admin,create_time,update_time FROM user WHERE (user_name = ?)
+2025-03-10 20:16:18.940 DEBUG 19372 --- [http-nio-9000-exec-3] c.m.m.mapper.UserMapper.selectList       : ==> Parameters: syh(String)
+2025-03-10 20:16:18.943 DEBUG 19372 --- [http-nio-9000-exec-3] c.m.m.mapper.UserMapper.selectList       : <==      Total: 0
+2025-03-10 20:16:18.945 DEBUG 19372 --- [http-nio-9000-exec-3] c.mjh.myojpro.mapper.UserMapper.insert   : ==>  Preparing: INSERT INTO user ( user_name, password, status ) VALUES ( ?, ?, ? )
+2025-03-10 20:16:18.946 DEBUG 19372 --- [http-nio-9000-exec-3] c.mjh.myojpro.mapper.UserMapper.insert   : ==> Parameters: syh(String), 202cb962ac59075b964b07152d234b70(String), true(Boolean)
+2025-03-10 20:16:18.951 DEBUG 19372 --- [http-nio-9000-exec-3] c.mjh.myojpro.mapper.UserMapper.insert   : <==    Updates: 1
+2025-03-10 20:16:27.895 DEBUG 19372 --- [http-nio-9000-exec-4] c.m.myojpro.mapper.UserMapper.selectOne  : ==>  Preparing: SELECT user_id,user_name,password,status,is_admin,create_time,update_time FROM user WHERE (user_name = ?)
+2025-03-10 20:16:27.896 DEBUG 19372 --- [http-nio-9000-exec-4] c.m.myojpro.mapper.UserMapper.selectOne  : ==> Parameters: syh(String)
+2025-03-10 20:16:27.897 DEBUG 19372 --- [http-nio-9000-exec-4] c.m.myojpro.mapper.UserMapper.selectOne  : <==      Total: 1
+2025-03-10 20:16:27.897  INFO 19372 --- [http-nio-9000-exec-4] c.m.m.service.impl.UserServiceImpl       : 当前用户存在，但是密码不正确
+2025-03-10 20:16:32.776 DEBUG 19372 --- [http-nio-9000-exec-5] c.m.myojpro.mapper.UserMapper.selectOne  : ==>  Preparing: SELECT user_id,user_name,password,status,is_admin,create_time,update_time FROM user WHERE (user_name = ?)
+2025-03-10 20:16:32.777 DEBUG 19372 --- [http-nio-9000-exec-5] c.m.myojpro.mapper.UserMapper.selectOne  : ==> Parameters: syh(String)
+2025-03-10 20:16:32.779 DEBUG 19372 --- [http-nio-9000-exec-5] c.m.myojpro.mapper.UserMapper.selectOne  : <==      Total: 1
+2025-03-10 20:16:32.780  INFO 19372 --- [http-nio-9000-exec-5] c.m.m.service.impl.UserServiceImpl       : 当前用户存在，但是密码不正确
+2025-03-10 20:16:44.962  INFO 19372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-10 20:16:44.969  INFO 19372 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-10 20:17:25.750  INFO 41652 --- [main] com.mjh.myojpro.MyOJproApplication       : Starting MyOJproApplication using Java 1.8.0_392 on MaJiahui with PID 41652 (D:\JavaCode\Yupi\OJ\MyOJpro\target\classes started by Ma Jiahui in D:\JavaCode\Yupi\OJ\MyOJpro)
+2025-03-10 20:17:25.752 DEBUG 41652 --- [main] com.mjh.myojpro.MyOJproApplication       : Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-03-10 20:17:25.752  INFO 41652 --- [main] com.mjh.myojpro.MyOJproApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-10 20:17:26.363  INFO 41652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2025-03-10 20:17:26.368  INFO 41652 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-10 20:17:26.369  INFO 41652 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-03-10 20:17:26.425  INFO 41652 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-10 20:17:26.425  INFO 41652 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 646 ms
+2025-03-10 20:17:27.412  WARN 41652 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mjh.myojpro.model.pojo.User".
+2025-03-10 20:17:27.625  INFO 41652 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-03-10 20:17:27.698  INFO 41652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2025-03-10 20:17:27.703  INFO 41652 --- [main] com.mjh.myojpro.MyOJproApplication       : Started MyOJproApplication in 2.189 seconds (JVM running for 3.09)
+2025-03-10 20:17:32.179  INFO 41652 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-10 20:17:32.180  INFO 41652 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-10 20:17:32.180  INFO 41652 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-03-10 20:17:32.276  INFO 41652 --- [http-nio-9000-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-10 20:17:32.445  INFO 41652 --- [http-nio-9000-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-10 20:17:32.449 DEBUG 41652 --- [http-nio-9000-exec-1] c.m.myojpro.mapper.UserMapper.selectOne  : ==>  Preparing: SELECT user_id,user_name,password,status,is_admin,create_time,update_time FROM user WHERE (user_name = ?)
+2025-03-10 20:17:32.463 DEBUG 41652 --- [http-nio-9000-exec-1] c.m.myojpro.mapper.UserMapper.selectOne  : ==> Parameters: syh(String)
+2025-03-10 20:17:32.477 DEBUG 41652 --- [http-nio-9000-exec-1] c.m.myojpro.mapper.UserMapper.selectOne  : <==      Total: 1
+2025-03-10 20:17:32.485  INFO 41652 --- [http-nio-9000-exec-1] c.m.m.service.impl.UserServiceImpl       : syh登录成功
+2025-03-10 20:17:40.510  INFO 41652 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-10 20:17:40.518  INFO 41652 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
