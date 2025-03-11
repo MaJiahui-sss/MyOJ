@@ -10,12 +10,14 @@ import com.mjh.myojpro.exception.BusinessException;
 import com.mjh.myojpro.model.pojo.User;
 import com.mjh.myojpro.service.UserService;
 import com.mjh.myojpro.mapper.UserMapper;
+import com.mjh.myojpro.utils.JWTUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.awt.*;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -58,7 +60,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     @Override
-    public boolean login(User user) throws BusinessException ,RuntimeException{
+    public String login(User user) throws BusinessException ,RuntimeException{
         //逻辑
         /*
         拿到用户的信息，按照用户名查询是否存在这个用户，如果存在，再去比较密码是否一致，如果不一致，登录失败，一致则登录成功
@@ -80,8 +82,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             throw new BusinessException(StatusCodeEnum.PARAMS_ERROR,"当前用户存在，但是密码错误");
         }
         log.info(selectedUser.getUserName()+"登录成功");
-
-        return true;
+        HashMap<String,String> claims = new HashMap<>();
+        claims.put("userId",selectedUser.getUserId().toString());
+        claims.put("userName",selectedUser.getUserName());
+        String token = JWTUtils.getToken(claims);
+        return token;
     }
 }
 

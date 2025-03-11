@@ -9,6 +9,6 @@ import com.mjh.myojpro.model.pojo.User;
 * @createDate 2025-03-10 17:03:36
 */
 public interface UserService extends IService<User> {
-    public boolean login(User user);
+    public String login(User user);
     public boolean register(User user);
 }

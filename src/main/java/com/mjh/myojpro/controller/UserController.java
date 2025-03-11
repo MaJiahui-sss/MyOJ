@@ -22,12 +22,12 @@ public class UserController {
         System.out.println("——————————————————————————————连接成功————————————————————————————");
     }
     @GetMapping("/user/login")
-    public Response login(@RequestBody UserVo userVo){
+    public Response<String> login(@RequestBody UserVo userVo){
         //System.out.println(userVo.toString());
         User user=new User();
         BeanUtils.copyProperties(userVo,user);
-        userService.login(user);
-        return new Response(StatusCodeEnum.SUCCESS,"登录成功",null);
+        String token = userService.login(user);
+        return new Response(StatusCodeEnum.SUCCESS,"登录成功",token);
     }
     @PostMapping("/user/register")
     public Response register(@RequestBody User user){
