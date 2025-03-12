@@ -30,3 +30,33 @@
 2025-03-11 15:05:20.350 DEBUG 32184 --- [http-nio-9000-exec-5] c.mjh.myojpro.mapper.UserMapper.insert   : <==    Updates: 1
 2025-03-11 15:05:24.219  INFO 32184 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-03-11 15:05:24.227  INFO 32184 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-11 15:35:37.777  INFO 40580 --- [main] com.mjh.myojpro.MyOJproApplication       : Starting MyOJproApplication using Java 1.8.0_392 on MaJiahui with PID 40580 (D:\JavaCode\Yupi\OJ\MyOJpro\target\classes started by Ma Jiahui in D:\JavaCode\Yupi\OJ\MyOJpro)
+2025-03-11 15:35:37.779 DEBUG 40580 --- [main] com.mjh.myojpro.MyOJproApplication       : Running with Spring Boot v2.6.13, Spring v5.3.23
+2025-03-11 15:35:37.779  INFO 40580 --- [main] com.mjh.myojpro.MyOJproApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-11 15:35:38.445  INFO 40580 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2025-03-11 15:35:38.452  INFO 40580 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-11 15:35:38.452  INFO 40580 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2025-03-11 15:35:38.521  INFO 40580 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-11 15:35:38.521  INFO 40580 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 709 ms
+2025-03-11 15:35:39.361  WARN 40580 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.mjh.myojpro.model.pojo.User".
+2025-03-11 15:35:39.612  INFO 40580 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-03-11 15:35:39.705  INFO 40580 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path ''
+2025-03-11 15:35:39.711  INFO 40580 --- [main] com.mjh.myojpro.MyOJproApplication       : Started MyOJproApplication in 2.282 seconds (JVM running for 3.283)
+2025-03-11 15:35:43.613  INFO 40580 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-11 15:35:43.613  INFO 40580 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-11 15:35:43.615  INFO 40580 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-11 15:35:43.727  INFO 40580 --- [http-nio-9000-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-11 15:35:43.932  INFO 40580 --- [http-nio-9000-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-11 15:35:43.937 DEBUG 40580 --- [http-nio-9000-exec-1] c.m.m.mapper.UserMapper.selectList       : ==>  Preparing: SELECT user_id,user_name,password,status,is_admin,create_time,update_time FROM user WHERE (user_name = ?)
+2025-03-11 15:35:43.951 DEBUG 40580 --- [http-nio-9000-exec-1] c.m.m.mapper.UserMapper.selectList       : ==> Parameters: dxj(String)
+2025-03-11 15:35:43.968 DEBUG 40580 --- [http-nio-9000-exec-1] c.m.m.mapper.UserMapper.selectList       : <==      Total: 1
+2025-03-11 15:35:48.046 DEBUG 40580 --- [http-nio-9000-exec-2] c.m.myojpro.mapper.UserMapper.selectOne  : ==>  Preparing: SELECT user_id,user_name,password,status,is_admin,create_time,update_time FROM user WHERE (user_name = ?)
+2025-03-11 15:35:48.046 DEBUG 40580 --- [http-nio-9000-exec-2] c.m.myojpro.mapper.UserMapper.selectOne  : ==> Parameters: syh(String)
+2025-03-11 15:35:48.049 DEBUG 40580 --- [http-nio-9000-exec-2] c.m.myojpro.mapper.UserMapper.selectOne  : <==      Total: 1
+2025-03-11 15:35:48.060  INFO 40580 --- [http-nio-9000-exec-2] c.m.m.service.impl.UserServiceImpl       : syh登录成功
+2025-03-11 15:37:03.238 DEBUG 40580 --- [http-nio-9000-exec-5] c.m.myojpro.mapper.UserMapper.selectOne  : ==>  Preparing: SELECT user_id,user_name,password,status,is_admin,create_time,update_time FROM user WHERE (user_name = ?)
+2025-03-11 15:37:03.239 DEBUG 40580 --- [http-nio-9000-exec-5] c.m.myojpro.mapper.UserMapper.selectOne  : ==> Parameters: syh(String)
+2025-03-11 15:37:03.240 DEBUG 40580 --- [http-nio-9000-exec-5] c.m.myojpro.mapper.UserMapper.selectOne  : <==      Total: 1
+2025-03-11 15:37:03.242  INFO 40580 --- [http-nio-9000-exec-5] c.m.m.service.impl.UserServiceImpl       : syh登录成功
+2025-03-11 15:37:27.677  INFO 40580 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-11 15:37:27.685  INFO 40580 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
